@@ -1,3 +1,4 @@
+const port = process.env.PORT || 4000;
 require('dotenv').config();
 const express = require("express");
 const mongodb = require("mongodb");
@@ -60,6 +61,6 @@ app.delete("/delete-user/:id",async(req, res)=>{
         console.log(error)
     }
 })
-app.listen(2000, () => 
+app.listen(port, () => 
     console.log("database added successfully")
 );
